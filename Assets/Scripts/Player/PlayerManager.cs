@@ -11,6 +11,7 @@ public class PlayerManager : Singleton<PlayerManager>
     public void CreatePlayer(Vector3 position)
     {
         _player = Instantiate(PlayerPrefab, position, Quaternion.identity);
+        CameraManager.Instance.SetPlayer(_player);
     }
 
 }
